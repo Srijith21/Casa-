@@ -16,7 +16,7 @@ function Header() {
                     <Linktags to="/">Home</Linktags>
                 </HeaderNavBarItems>
                 <HeaderNavBarItems>
-                    <Linktags to="/">Service Offer</Linktags>
+                    <Linktags to="">Service Offer</Linktags>
                 </HeaderNavBarItems>
                 <HeaderNavBarItems>
                     <Linktags to="/experience">Experience</Linktags>

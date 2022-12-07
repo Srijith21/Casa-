@@ -8,6 +8,7 @@ import facebook from '../../src/Assets/website2=FACEBOOK.svg'
 import linkedin from '../../src/Assets/Linked-in.svg'
 import youtube from '../../src/Assets/youtbe.svg'
 import twitter from '../../src/Assets/website2=twitter.svg'
+import { Link } from 'react-router-dom'
 
 
 function Footer() {
@@ -16,7 +17,7 @@ function Footer() {
         <Container>
             <TopSection>
                 <TopLeft>
-                    <Logoimg src={logo}/>
+                    <Link to="/"><Logoimg src={logo}/></Link>
                     <Text>We help ambitious business like your generate more profits by building awarness,driving web traffic,connecting with customers and growing overall sales</Text>
                 </TopLeft>
                 <TopRight>
@@ -80,6 +81,7 @@ function Footer() {
 export default Footer
 
 const Footersection = styled.div`
+    background-color:rgba(255, 255, 255, 0.81);
     height: auto;
 `
 const Container = styled.div`
@@ -267,7 +269,7 @@ const BottomSection = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 35px;
-    margin: 15px auto;
+    margin: auto;
     padding: 10px auto;
     font-size: 15px;
     font-weight: 500;
