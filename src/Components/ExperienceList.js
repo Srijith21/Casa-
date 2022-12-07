@@ -43,7 +43,7 @@ function ExperienceList() {
 						<ExpTitle>UI Designer</ExpTitle>
 						<CompanyName>Facebook</CompanyName>
                         <Description> 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illum quos earum sint reiciendis! Nam soluta incidunt vel alias facere cumque earum, corrupti modi aliquid aspernatur ab odit error rerum excepturi illum unde tenetur animi, explicabo laborum! Eveniet nisi at voluptatem, ducimus, repellat, totam nobis porro earum deserunt incidunt distinctio
+                            Lorem ipsum dolorsit amet  consectetur adipisicing elit. Laudantium illum quos earum sint reiciendis! Nam soluta incidunt vel alias facere cumque earum, corrupti modi aliquid aspernatur ab odit error rerum excepturi illum unde tenetur animi, explicabo laborum! Eveniet nisi at voluptatem, ducimus, repellat, totam nobis porro earum deserunt incidunt distinctio
                         </Description>
 					</ExpHead>
 				</ExperienceTable>
