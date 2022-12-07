@@ -4,6 +4,7 @@ import Enquiry from './Pages/Enquiry'
 import Experience from './Pages/Experience'
 import Home from './Pages/Home'
 import Project from './Pages/Project'
+import ServiceOffer from './Pages/ServiceOffer'
 import Signin from './Pages/SignIn'
 import SignUp from './Pages/SignUp'
 
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes >
           <Route path='/' element= {<Home/>}/>
+          <Route path='/serviceoffer' element= {<ServiceOffer/>}/>
           <Route path='/projects' element={<Project/>}/>
           <Route path='/enquiry' element={<Enquiry/>}/>
           <Route path='/experience' element={<Experience/>}/>

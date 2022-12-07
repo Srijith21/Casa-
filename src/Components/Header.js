@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import styled from 'styled-components'
 import Logo from '../../src/Assets/casa-logo.svg'
 function Header() {
@@ -7,33 +7,33 @@ function Header() {
     <HeaderBar>
         <Container>
             <HeaderLogo>
-                <Linktags to="/">
+                <NavLink to="/">
                     <LogoImg src={Logo}/>
-                </Linktags> 
+                </NavLink> 
             </HeaderLogo>
             <HeaderNavBar>
                 <HeaderNavBarItems>
-                    <Linktags to="/">Home</Linktags>
+                    <NavLink to="/">Home</NavLink>
                 </HeaderNavBarItems>
                 <HeaderNavBarItems>
-                    <Linktags to="">Service Offer</Linktags>
+                    <NavLink to="/serviceoffer">Service Offer</NavLink>
                 </HeaderNavBarItems>
                 <HeaderNavBarItems>
-                    <Linktags to="/experience">Experience</Linktags>
+                    <NavLink to="/experience">Experience</NavLink>
                 </HeaderNavBarItems>
                 <HeaderNavBarItems>
-                    <Linktags to="/projects">Projects</Linktags>
+                    <NavLink to="/projects">Projects</NavLink>
                 </HeaderNavBarItems>
                 <HeaderNavBarItems>
-                    <Linktags to="/enquiry">Contact</Linktags>
+                    <NavLink to="/enquiry">Contact</NavLink>
                 </HeaderNavBarItems>
             </HeaderNavBar>
             <Signing>
                 <SigningLeft>
-                    <Linktags to="/signin">Sign In</Linktags>
+                    <NavLink to="/signin">Sign In</NavLink>
                 </SigningLeft>
                 <SigningRight>
-                <Linktags to="/signup">Sign Up</Linktags>
+                <NavLink to="/signup">Sign Up</NavLink>
                 </SigningRight>
             </Signing>
         </Container>
@@ -108,11 +108,11 @@ const HeaderNavBar = styled.ul`
     }
 `
 
-const Linktags = styled(Link)`
-    color: #000;
-    text-decoration: none;
+// const Linktags = styled(Link)`
+//     color: #000;
+//     text-decoration: none;
     
-`
+// `
 const HeaderNavBarItems = styled.li`
     color: #000;
     list-style: none;
