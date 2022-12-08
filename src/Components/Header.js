@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {NavLink} from 'react-router-dom'
 import styled from 'styled-components'
 import Logo from '../../src/Assets/casa-logo.svg'
+import ButtonImage from '../../src/Assets/menu-bar-icon.svg'
 function Header() {
+    const [showLLinks,setShowLinks]= useState(false)
   return (
     <HeaderBar>
         <Container>
+            <Button onClick={()=>setShowLinks(!showLLinks)}>
+                <ButtonImg src={ButtonImage}/>
+            </Button>
             <HeaderLogo>
                 <NavLink to="/">
                     <LogoImg src={Logo}/>
                 </NavLink> 
             </HeaderLogo>
-            <HeaderNavBar>
+            
+            <HeaderNavBar id={showLLinks ? "hidden" : ""}>
                 <HeaderNavBarItems>
                     <NavLink to="/">Home</NavLink>
                 </HeaderNavBarItems>
@@ -64,10 +70,12 @@ const Container = styled.div`
     justify-content: space-between;
     @media all and (max-width:480px){
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
     @media all and (max-width:320px){
-        width: 100%;
+        width: 90%;
+        margin: auto;
     }
 `
 const HeaderLogo = styled.div`
@@ -77,7 +85,7 @@ const HeaderLogo = styled.div`
         margin: auto;
     }
     @media all and (max-width:360px){
-        display: none;
+        display: flex;
     }
 `
 const LogoImg = styled.img`
@@ -85,22 +93,55 @@ const LogoImg = styled.img`
     width: 50%;
     height: 50px;
     @media all and (max-width:480px){
-        width: 20%;
+        width: 60%;
         margin: 0 auto;
     }
     @media all and (max-width:360px){
-        width: 18%;
+        width: 60%;
         margin: 0 auto;
     }
+    @media all and (max-width:320px){
+        width: 60%;
+        margin: 0 auto;
+    }
+`
+const Button =styled.button`
+    display: none;
+    border-style: none;
+    padding: 0;
+    background-color: transparent;
+    @media all and (max-width:480px){
+        display: flex;
+    }
+`
+const ButtonImg = styled.img`
+    display: block;
+    width: 100%;
+    height:15px;
+    margin: auto 10px;
 `
 const HeaderNavBar = styled.ul`
     padding:0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     @media all and (max-width:480px){
-        width: 70%;
-        margin:0 auto;
+        display: none;
+
+        &#hidden{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: bottom 0.5s;
+    }
     }
     @media all and (max-width:360px){
         width: 65%;
@@ -108,25 +149,21 @@ const HeaderNavBar = styled.ul`
     }
 `
 
-// const Linktags = styled(Link)`
-//     color: #000;
-//     text-decoration: none;
-    
-// `
 const HeaderNavBarItems = styled.li`
     color: #000;
     list-style: none;
     font-size: 18px;
     margin-right: 25px;
+    border-bottom: 1px solid transparent;
     &:last-child{
         margin-right: 0;
     }
     &:first-child{
         margin-left: 0;
     }
-    &:hover{
-        text-decoration: underline;
-        font-weight: 500;
+    &:hover{    
+        border-bottom: 2px solid #FCDA69;
+
     }
     @media all and (max-width:980px){
         font-size:15px;
@@ -136,7 +173,7 @@ const HeaderNavBarItems = styled.li`
         font-size: 13px;
     }
     @media all and (max-width:480px){
-        margin-right:8px;
+        margin:10px 5px;
         font-size: 11px;
     }
     @media all and (max-width:360px){
